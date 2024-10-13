@@ -30,6 +30,9 @@ public:
     player* getLeftField();
     player* getCenterField();
     player* getRightField();
+    int getCurrentHitter();
+
+    void setNextHitter();
     
 private:
     std::string& name;

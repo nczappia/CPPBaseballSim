@@ -63,3 +63,16 @@ player* getCenterField(){
 player* getRightField(){
     return right_fielder;
 }
+
+player* getCurrentHitter(){
+    return batting_order[current_hitter];
+}
+
+void setNextHitter(){
+    current_val = current_hitter;
+    if(current_val < 9){
+        current_hitter++;
+    } else {
+        current_hitter = 1;
+    }
+}
