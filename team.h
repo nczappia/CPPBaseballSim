@@ -30,9 +30,12 @@ public:
     player* getLeftField();
     player* getCenterField();
     player* getRightField();
-    int getCurrentHitter();
+    player* getCurrentHitter();
 
     void setNextHitter();
+
+    void addRuns(int scored_runs);
+    void addHit();
     
 private:
     std::string& name;
@@ -47,6 +50,8 @@ private:
     player* right_fielder;
     player batting_order[9];
     int current_hitter;
+    int runs;
+    int hits;
 };
 
 #endif

@@ -11,6 +11,7 @@ team::team(std::string& name,
            player* center_field,
            player* right_field,
            player batting_order[9]):
+
     name(name),
     pitcher(pitcher),
     catcher(catcher),
@@ -22,57 +23,66 @@ team::team(std::string& name,
     center_fielder(center_field),
     right_fielder(right_field),
     batting_order(batting_order),
-    current_hitter(1) {}
+    current_hitter(1),
+    runs(0),
+    hits(0) {}
 
-std::string getName(){
+std::string team::getName(){
     return name;
 }
 
-player* getPitcher(){
+player* team::getPitcher(){
     return pitcher;
 }
 
-player* getCatcher(){
+player* team::getCatcher(){
     return catcher;
 }
 
-player* getFirstBase(){
+player* team::getFirstBase(){
     return first_baseman;
 }
 
-player* getSecondBase(){
+player* team::getSecondBase(){
     return second_baseman;
 }
 
-player* getShortstop(){
+player* team::getShortstop(){
     return shortstop;
 }
 
-player* getThirdBase(){
+player* team::getThirdBase(){
     return third_baseman;
 }
 
-player* getLeftField(){
+player* team::getLeftField(){
     return left_fielder;
 }
 
-player* getCenterField(){
+player* team::getCenterField(){
     return center_fielder;
 }
 
-player* getRightField(){
+player* team::getRightField(){
     return right_fielder;
 }
 
-player* getCurrentHitter(){
+player* team::getCurrentHitter(){
     return batting_order[current_hitter];
 }
 
-void setNextHitter(){
-    current_val = current_hitter;
-    if(current_val < 9){
+void team::setNextHitter(){
+    if(current_hitter < 9){
         current_hitter++;
     } else {
         current_hitter = 1;
     }
+}
+
+void team::addRuns(int scored_runs){
+    runs += scored_runs;
+}
+
+void team::addHit(){
+    hits++;
 }

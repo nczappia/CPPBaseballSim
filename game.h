@@ -1,6 +1,9 @@
 #ifndef GAME
 #define GAME
 
+#include <player.h>
+#include <team.h>
+
 class team;
 
 class game{
@@ -9,7 +12,11 @@ public:
 
     bool play_game();
 
-    void determineOutcome(player* pitcher, player* hitter, int outs, player* bases, int hitting_team_runs);
+    void determineOutcome(player* pitcher, player* hitter, team* hitting_team);
+
+    void resetForNextInning();
+
+    
 
 private:
     team* away_team;
@@ -17,10 +24,6 @@ private:
     int inning;
     int outs;
     player* bases[3];
-    int away_runs;
-    int away_hits;
-    int home_runs;
-    int home_hits;
 };
 
 #endif

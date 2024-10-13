@@ -23,46 +23,46 @@ player::player(std::string position,
     opp_k_rate(opp_k_rate),
     opp_walk_rate(opp_walk_rate) {}
 
-std::string getPosition(){
+std::string player::getPosition(){
     return position;
 }
 
-int getAverage(){
+int player::getAverage(){
     return batting_average;
 }
 
-int getOnBasePercentage(){
+int player::getOnBasePercentage(){
     return on_base_percentage;
 }
 
-int getSluggingPercentage(){
+int player::getSluggingPercentage(){
     return slugging_percentage;
 }
 
-int getKRate(){
+int player::getKRate(){
     return k_rate;
 }
 
-int getWalkRate(){
+int player::getWalkRate(){
     return walk_rate;
 }
 
-int getOppAverage(){
+int player::getOppAverage(){
     return opp_avg;
 }
 
-int getOppOnBasePercentage(){
+int player::getOppOnBasePercentage(){
     return opp_obp;
 }
 
-int getOppSluggingPercentage(){
+int player::getOppSluggingPercentage(){
     return opp_slg;
 }
 
-int getOppKRate(){
+int player::getOppKRate(){
     return opp_k_rate;
 }
 
-int getOppWalkRate(){
+int player::getOppWalkRate(){
     return opp_walk_rate;
 }
